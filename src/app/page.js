@@ -44,11 +44,11 @@ export default function Home() {
           <div className="bg-white rounded-lg shadow w-full p-5">
             <br></br>
             <p>
-              BeamDSP is an opensource web app for designing and visualizing digital filters.
+              AvaDSP is an opensource web app for designing and visualizing digital filters, estimating power spectral density and more.
               Features include designing filters by placing poles and zeroes on the Z-plane, FIR filter design using windowing method, IIR filter design using analog-to-digital transfomation, and lastly, linear phase FIR design via weighted least-squares solution.
             </p>
             <p>
-              For additional information visit: <a className="text-blue-600" href="https://github.com/BeamDSP">https://github.com/BeamDSP</a></p>
+              For additional information visit: <a className="text-blue-600" href="https://github.com/AvaDSP">https://github.com/AvaDSP</a></p>
             <br></br>
             <p>Version: 0.2</p>
           </div >

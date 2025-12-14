@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "BeamDSP: Digital filter design web app",
+  title: "AvaDSP: Digital Signal Processing web app",
   description: "A web app to design digital filters",
 };
 

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useRef } from 'react'
 import { complex } from 'mathjs';
-import { convolve } from '../Common/Utils';
+import { convolve } from '../../core';
 import Infobox from '../../ui/Infobox';
 
 export const ZPlane = ({ points, updatePoint, updateMagnitudeResponse, updatePhaseResponse, updateFilterCoefficients }) => {
