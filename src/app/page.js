@@ -15,8 +15,9 @@ export default function Home() {
     { placeholder: "Analog-to-digital transform", name: "iir_filter_design" },
     { placeholder: "Linear phase FIR-LS", name: "least_square_linear_phase_FIR" },
     { placeholder: "separator", name: "seperator" },
-    { placeholder: "Periodogram Estimation", name: "periodogram" },
+    { placeholder: "Periodogram estimation", name: "periodogram" },
     { placeholder: "Welch's method", name: "welchs_estimate" },
+    { placeholder: "separator", name: "seperator" },
     { placeholder: "> Interactive Prompt", name: "prompt" },
     { placeholder: "Help?", name: "help" }
   ];
