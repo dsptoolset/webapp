@@ -15,6 +15,10 @@ export default function Home() {
     { placeholder: "Analog-to-digital transform", name: "iir_filter_design" },
     { placeholder: "Linear phase FIR-LS", name: "least_square_linear_phase_FIR" },
     { placeholder: "separator", name: "seperator" },
+
+    { placeholder: "Simulation", name: "sensor_fusion_simulation" },
+    { placeholder: "bottom_elements", name: "bottom_elements" },
+    { placeholder: "separator", name: "seperator" },
     { placeholder: "Periodogram estimation", name: "periodogram" },
     { placeholder: "Welch's method", name: "welchs_estimate" },
     { placeholder: "separator2", name: "seperator" },
@@ -32,7 +36,7 @@ export default function Home() {
         return <FIRFilterDesign />;
       case "iir_filter_design":
         return <IIRFilterDesign />;
-        case "least_square_linear_phase_FIR":
+      case "least_square_linear_phase_FIR":
         return <LeastSqaureLinearPhaseFIRDesign />;
       case "periodogram":
         return <Periodogram />
@@ -42,7 +46,7 @@ export default function Home() {
         return <Prompt />;
       case "help":
         return (
-          <div className="bg-white rounded-lg shadow w-full p-5">
+          <div className="text-black rounded-lg shadow w-full p-5">
             <br></br>
             <p>
               AvaDSP is an opensource web app for designing and visualizing digital filters, estimating power spectral density and more.
@@ -51,7 +55,7 @@ export default function Home() {
             <p>
               For additional information visit: <a className="text-blue-600" href="https://github.com/AvaDSP">https://github.com/AvaDSP</a></p>
             <br></br>
-            <p>Version: 0.2</p>
+            <p>Version: 0.3</p>
           </div >
         )
     }
@@ -62,43 +66,47 @@ export default function Home() {
       {/* Sidebar */}
       <aside className="fixed flex flex-col px-5 py-4 border-r border-slate-200 z-30 bg-white h-full">
         {items.map((item, index) => {
-        if (item.name === "prompt") {
-          return (
+          if (item.name === "prompt") {
+            return (
               <button
                 key={`prompt-${item.name}-${index}`}
-                className={`flex mt-auto h-10 p-2 text-sm rounded w-48 
+                className={`flex h-10 p-2 text-sm rounded w-48 
                   ${selectedItem.name === item.name ? "bg-white hover:bg-gray-50 shadow" : ""}`}
                 onClick={() => setSelectedItem(item)}
               >
                 <p className="font-bold">{item.placeholder}</p>
               </button>
-          );
-        }  else if (item.name === "seperator") {
-          return (
-            <div 
-              key={`prompt-${item.name}-${index}`}
-              className="h-px bg-gray-300 my-2 w-full"
-            ></div>
-          );
-        } else {
-          return (
-            <button
-              key={`item-${item.name}-${index}`}
-              className={`flex h-10 p-2 text-sm rounded
+            );
+          } else if (item.name === "seperator") {
+            return (
+              <div
+                key={`seperator-${item.name}-${index}`}
+                className="h-px bg-gray-300 my-2 w-full"
+              ></div>
+            );
+          } else if (item.name === "bottom_elements") {
+            return (
+              <div key={`seperator-${item.name}-${index}`} className="mt-auto"></div>
+            )
+          } else {
+            return (
+              <button
+                key={`item-${item.name}-${index}`}
+                className={`flex h-10 p-2 text-sm rounded
                 ${selectedItem.name === item.name ? "bg-white hover:bg-gray-50 shadow" : ""}`}
-              onClick={() => setSelectedItem(item)}
-            >
-              <p>{item.placeholder}</p>
-            </button>
-          );
-        }
-      })}
+                onClick={() => setSelectedItem(item)}
+              >
+                <p>{item.placeholder}</p>
+              </button>
+            );
+          }
+        })}
 
       </aside>
       {/* Main app */}
       <main className="absolute left-[230px] w-[calc(100vw-230px)] h-full overflow-y-auto flex z-10">
         {addComponent()}
       </main>
-  </div>
+    </div>
   )
 }
