@@ -4,12 +4,11 @@ import { NodeBase, Edge, JunctionNode, Sum, Generator, Modifier, FSFilter, Displ
 import { Plant } from "./NodeTypes/Plant";
 import { simulate } from './SimEngine';
 
-export const SensorFusionSimulation = () => {
+export const Simulation = () => {
     const canvasRef = useRef(null);
     const [nodes, setNodes] = useState<NodeBase[]>([]);
 
     const [edgeList, setEdgeList] = useState<Edge[]>([]);
-    // { from: node, to: nodes[i], fromPos: 1, toPos: 1 }
 
     const [Ts, setTs] = useState<number>(0.01);
     const [simulationSteps, setSimulationSteps] = useState<number>(100);

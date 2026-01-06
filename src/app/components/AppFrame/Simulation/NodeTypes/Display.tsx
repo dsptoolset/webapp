@@ -12,7 +12,7 @@ export class Display extends NodeBase {
     if (u && u.length > 0) {
       u.forEach(sig => {
         if (sig.y != null && sig.t != null) {
-          this.graphX.push(sig.t);
+          this.graphX.push(Math.round(sig.t * 100) / 100);
           this.graphY.push(sig.y);
         }
       });
