@@ -17,7 +17,7 @@ export default function Home() {
     { placeholder: "Linear phase FIR-LS", name: "least_square_linear_phase_FIR" },
     { placeholder: "separator", name: "seperator" },
 
-    { placeholder: "Simulation", name: "sensor_fusion_simulation" },
+    { placeholder: "Hybrid Simulation", name: "sensor_fusion_simulation" },
     { placeholder: "bottom_elements", name: "bottom_elements" },
     { placeholder: "separator", name: "seperator" },
     { placeholder: "Periodogram estimation", name: "periodogram" },
